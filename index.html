@@ -77,6 +77,37 @@
             font-size: 2rem;
         }
 
+        h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p {
+            font-size: 1rem;
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -100,6 +131,27 @@
         .service-card h3 {
             color: #1e3c72;
             margin-bottom: 0.5rem;
+        }
+
+        .about-content {
+            background: #f0f0f0;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+        }
+
+        .about-content ul {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .about-content li {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
         .contact-info {
@@ -149,61 +201,95 @@
             .container {
                 padding: 0 1rem;
             }
+
+            .highlight-box .number {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Omega Plumbing Services</h1>
-        <p>Central Coast's Trusted Plumbing Solutions</p>
+        <p>Central Coast's Premier Family-Owned Plumbing Company</p>
     </header>
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#services">Services</a>
         <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <main class="container">
         <section id="home">
             <h2>Welcome</h2>
-            <p>Welcome to Omega Plumbing Services, your trusted partner for all plumbing needs on the Central Coast. With years of experience and a commitment to quality service, we're here to keep your plumbing systems running smoothly.</p>
-        </section>
+            <p>Welcome to Omega Plumbing Services, your trusted partner for high-end residential and light commercial plumbing needs on the Central Coast. As a family-run business with over three decades of experience, we're committed to delivering exceptional craftsmanship and reliable service.</p>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Emergency Repairs</h3>
-                    <p>Available 24/7 for urgent plumbing emergencies. We respond quickly to minimize damage and restore functionality.</p>
+            <div class="highlights">
+                <div class="highlight-box">
+                    <div class="number">32+</div>
+                    <p>Years of Experience</p>
                 </div>
-                <div class="service-card">
-                    <h3>Drain Cleaning</h3>
-                    <p>Professional drain cleaning services to clear blockages and keep your drainage systems flowing properly.</p>
+                <div class="highlight-box">
+                    <div class="number">5</div>
+                    <p>States Licensed</p>
                 </div>
-                <div class="service-card">
-                    <h3>Pipe Installation</h3>
-                    <p>Expert installation of new plumbing systems and pipe replacements for residential and commercial properties.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Maintenance</h3>
-                    <p>Regular maintenance programs to prevent problems before they start and extend the life of your plumbing.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Water Heaters</h3>
-                    <p>Installation, repair, and maintenance of water heater systems for optimal performance.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Leak Detection</h3>
-                    <p>Advanced leak detection technology to identify and repair leaks quickly and efficiently.</p>
+                <div class="highlight-box">
+                    <div class="number">Family</div>
+                    <p>Owned & Operated</p>
                 </div>
             </div>
         </section>
 
         <section id="about">
             <h2>About Us</h2>
-            <p>Omega Plumbing Services has been serving the Central Coast community for many years. Our team of licensed and experienced plumbers is dedicated to providing reliable, efficient, and professional plumbing services. We take pride in our workmanship and customer satisfaction.</p>
+            <div class="about-content">
+                <p>Omega Plumbing Services is a family-run business built on a foundation of expertise, integrity, and dedication to quality. With <strong>32 years of plumbing experience</strong>, we've established ourselves as a trusted name in the industry.</p>
+
+                <p>Our team has been previously licensed to serve customers in <strong>5 states including California</strong>, bringing a wealth of knowledge and diverse experience to every project. Whether it's a complex residential installation or a commercial system upgrade, we approach each job with the same level of professionalism and attention to detail.</p>
+
+                <h3 style="margin-top: 1.5rem;">Our Specialties:</h3>
+                <ul>
+                    <li>High-end residential plumbing installations</li>
+                    <li>Light commercial plumbing systems</li>
+                    <li>Custom water systems and solutions</li>
+                    <li>Professional maintenance and repairs</li>
+                    <li>New construction and remodeling projects</li>
+                </ul>
+
+                <p style="margin-top: 1.5rem;">When you choose Omega Plumbing Services, you're choosing a family-run company that takes pride in its work and stands behind every installation and repair we perform.</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential Installation</h3>
+                    <p>Expert installation of high-end plumbing systems for new construction and remodeling projects. We handle everything from design to completion.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Commercial Plumbing</h3>
+                    <p>Light commercial plumbing services tailored to meet the unique needs of small businesses and commercial properties.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Water System Solutions</h3>
+                    <p>Custom water heating, filtration, and distribution systems designed for optimal performance and efficiency.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Repairs & Maintenance</h3>
+                    <p>Professional repair and maintenance services to keep your plumbing systems running smoothly and prevent costly problems.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Emergency Service</h3>
+                    <p>Available for urgent plumbing issues. We respond quickly to minimize damage and restore functionality.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Remodeling Projects</h3>
+                    <p>Full-service plumbing support for residential and commercial remodeling projects, large or small.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -212,13 +298,13 @@
                 <p><strong>Phone:</strong> <a href="tel:805-776-3403">(805) 776-3403</a></p>
                 <p><strong>Email:</strong> info@omegaplumbing.com</p>
                 <p><strong>Service Area:</strong> Central Coast and surrounding areas</p>
-                <p><strong>Hours:</strong> 24/7 Emergency Service Available</p>
+                <p><strong>Hours:</strong> Call for availability</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Omega Plumbing Services. All rights reserved.</p>
+        <p>&copy; 2024 Omega Plumbing Services. All rights reserved. | Family-Owned & Operated Since 1992</p>
     </footer>
 </body>
 </html>
