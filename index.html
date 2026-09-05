@@ -1,310 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omega Plumbing Services - Central Coast</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Omega Plumbing Services — family owned plumbing for the Central Coast: installations, repairs, water systems, and emergency service.">
+  <title>Omega Plumbing Services — Central Coast</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+  <style>
+    :root{
+      --bg: #000;            /* page background (black) */
+      --panel: #0f0f0f;      /* slightly lighter panels */
+      --brand-orange: #ff6a00;
+      --brand-orange-dark: #e35a00;
+      --muted: #111;
+      --text: #f2f2f2;
+      --muted-text: #cfcfcf;
+      --max-w:1100px;
+      --nav-h: 64px;
+    }
 
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      line-height:1.5;
+      margin:0;
+      background:var(--bg);
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
+    header{
+      background:linear-gradient(180deg,var(--panel), #070707);
+      color:var(--text);
+      padding:2rem 1rem;
+      text-align:center;
+      border-bottom: 4px solid var(--brand-orange);
+    }
 
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+    nav{
+      background:#000;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:40;
+      padding:.5rem 1rem;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      height:var(--nav-h);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
 
-        nav {
-            background-color: #1a1a1a;
-            padding: 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    nav a{
+      color:var(--muted-text);
+      text-decoration:none;
+      margin:.25rem .9rem;
+      font-weight:700;
+      letter-spacing:0.02em;
+      padding:.35rem .6rem;
+      border-radius:6px;
+    }
+    nav a:hover{
+      color:var(--brand-orange);
+      background: rgba(255,106,0,0.06);
+    }
+    nav a.active{ color: var(--brand-orange); }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
+    main{max-width:var(--max-w); margin:1.5rem auto; padding:0 1rem}
 
-        nav a:hover {
-            color: #4da6ff;
-        }
+    /* ensure anchored sections are visible under the sticky nav */
+    section{scroll-margin-top: calc(var(--nav-h) + 12px);} 
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+    section{margin:1.5rem 0; padding:1rem 0; border-bottom:1px solid rgba(255,255,255,0.03)}
+    h1{font-size:1.6rem; margin:.2rem 0; color:var(--text)}
+    h2{color:var(--text); font-size:1.2rem; margin:.4rem 0}
+    p{margin:.5rem 0; color:var(--muted-text)}
 
-        section {
-            padding: 3rem 0;
-            border-bottom: 1px solid #eee;
-        }
+    .grid{display:grid; gap:1rem}
+    .highlights{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));}
+    .box{
+      background: linear-gradient(180deg,var(--panel), #0b0b0b);
+      color:var(--text);
+      padding:1rem;
+      border-radius:8px;
+      text-align:center;
+      border: 2px solid rgba(255,106,0,0.06);
+    }
+    .box strong{display:block; font-size:1.6rem; color:var(--brand-orange)}
 
-        section:last-child {
-            border-bottom: none;
-        }
+    .services{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
 
-        h2 {
-            color: #1e3c72;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
+    .card{
+      background:var(--panel);
+      padding:1rem;
+      border-radius:8px;
+      border-left:6px solid var(--brand-orange);
+      color:var(--muted-text);
+    }
+    .card strong{color:var(--text)}
 
-        h3 {
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-        }
+    .contact{
+      background:linear-gradient(180deg,#0b0b0b,var(--panel));
+      padding:1rem;
+      border-radius:8px;
+      color:var(--muted-text);
+    }
+    .contact a{ color:var(--brand-orange); text-decoration:none; font-weight:700 }
+    .contact a:hover{ color:var(--brand-orange-dark); text-decoration:underline }
 
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
+    footer{
+      background:#000;
+      color:var(--muted-text);
+      text-align:center;
+      padding:1rem;
+      margin-top:1.5rem;
+      font-size:.9rem;
+      border-top:1px solid rgba(255,255,255,0.03);
+    }
 
-        .highlight-box {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .highlight-box .number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight-box p {
-            font-size: 1rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .service-card {
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #2a5298;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .service-card h3 {
-            color: #1e3c72;
-            margin-bottom: 0.5rem;
-        }
-
-        .about-content {
-            background: #f0f0f0;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-        }
-
-        .about-content p {
-            margin-bottom: 1rem;
-        }
-
-        .about-content ul {
-            margin-left: 2rem;
-            margin-top: 1rem;
-        }
-
-        .about-content li {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .contact-info {
-            background: #f0f0f0;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-
-        .contact-info p {
-            margin: 0.5rem 0;
-            font-size: 1.1rem;
-        }
-
-        .contact-info strong {
-            color: #1e3c72;
-        }
-
-        .contact-info a {
-            color: #2a5298;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            nav a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .highlight-box .number {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    /* small screens */
+    @media (max-width:520px){
+      h1{font-size:1.25rem}
+      nav a{display:inline-block; margin:.4rem .35rem}
+      .box strong{font-size:1.25rem}
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Omega Plumbing Services</h1>
-        <p>Central Coast's Premier Family-Owned Plumbing Company</p>
-    </header>
+  <header>
+    <h1>Omega Plumbing Services</h1>
+    <p>Central Coast's family-owned plumbing company — since 2001</p>
+  </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <nav aria-label="Main navigation">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <main class="container">
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>Welcome to Omega Plumbing Services, your trusted partner for high-end residential and light commercial plumbing needs on the Central Coast. As a family-run business with over three decades of experience, we're committed to delivering exceptional craftsmanship and reliable service.</p>
+  <main>
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>Omega Plumbing Services provides high-end residential and light commercial plumbing across the Central Coast. Family-run with decades of experience.</p>
 
-            <div class="highlights">
-                <div class="highlight-box">
-                    <div class="number">32+</div>
-                    <p>Years of Experience</p>
-                </div>
-                <div class="highlight-box">
-                    <div class="number">5</div>
-                    <p>States Licensed</p>
-                </div>
-                <div class="highlight-box">
-                    <div class="number">Family</div>
-                    <p>Owned & Operated</p>
-                </div>
-            </div>
-        </section>
+      <div class="grid highlights" style="margin-top:1rem">
+        <div class="box"><strong>32+</strong><div>Years experience</div></div>
+        <div class="box"><strong>Previously</strong><div>Licensed in 5 states</div></div>
+        <div class="box"><strong>Family</strong><div>Owned &amp; Operated</div></div>
+      </div>
+    </section>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <p>Omega Plumbing Services is a family-run business built on a foundation of expertise, integrity, and dedication to quality. With <strong>32 years of plumbing experience</strong>, we've established ourselves as a trusted name in the industry.</p>
+    <section id="about">
+      <h2>About Us</h2>
+      <div class="card">
+        <p>We focus on quality workmanship, reliable service, and customer satisfaction.</p>
+        <p><strong>Specialties:</strong></p>
+        <ul>
+          <li>High-end residential installations and light commercial</li>
+        </ul>
+      </div>
+    </section>
 
-                <p>Our team has been <strong>previously licensed to serve customers in 5 states including California</strong>, bringing a wealth of knowledge and diverse experience to every project. Whether it's a complex residential installation or a commercial system upgrade, we approach each job with the same level of professionalism and attention to detail.</p>
+    <section id="services">
+      <h2>Services</h2>
+      <div class="grid services" role="list">
+        <div class="card" role="listitem"><strong>Residential Installation</strong><p>Design &amp; install plumbing systems for new builds and remodels.</p></div>
+        <div class="card" role="listitem"><strong>Commercial Plumbing</strong><p>Light commercial work tailored to small businesses.</p></div>
+      </div>
+    </section>
 
-                <h3 style="margin-top: 1.5rem;">Our Specialties:</h3>
-                <ul>
-                    <li>High-end residential plumbing installations</li>
-                    <li>Light commercial plumbing systems</li>
-                    <li>Custom water systems and solutions</li>
-                    <li>Professional maintenance and repairs</li>
-                    <li>New construction and remodeling projects</li>
-                </ul>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <p><strong>Phone:</strong> <a href="tel:+18057763403"> (805) 776-3403</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@omegaplumbing.com">info@omegaplumbing.com</a></p>
+        <p><strong>Service area:</strong> Central Coast</p>
+        <p><strong>Hours:</strong> Call for availability</p>
+      </div>
+    </section>
+  </main>
 
-                <p style="margin-top: 1.5rem;">When you choose Omega Plumbing Services, you're choosing a family-run company that takes pride in its work and stands behind every installation and repair we perform.</p>
-            </div>
-        </section>
-
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Residential Installation</h3>
-                    <p>Expert installation of high-end plumbing systems for new construction and remodeling projects. We handle everything from design to completion.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Commercial Plumbing</h3>
-                    <p>Light commercial plumbing services tailored to meet the unique needs of small businesses and commercial properties.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Water System Solutions</h3>
-                    <p>Custom water heating, filtration, and distribution systems designed for optimal performance and efficiency.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Repairs & Maintenance</h3>
-                    <p>Professional repair and maintenance services to keep your plumbing systems running smoothly and prevent costly problems.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Emergency Service</h3>
-                    <p>Available for urgent plumbing issues. We respond quickly to minimize damage and restore functionality.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Remodeling Projects</h3>
-                    <p>Full-service plumbing support for residential and commercial remodeling projects, large or small.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p><strong>Phone:</strong> <a href="tel:805-776-3403">(805) 776-3403</a></p>
-                <p><strong>Email:</strong> info@omegaplumbing.com</p>
-                <p><strong>Service Area:</strong> Central Coast and surrounding areas</p>
-                <p><strong>Hours:</strong> Call for availability</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Omega Plumbing Services. All rights reserved. | Family-Owned & Operated Since 1992</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Omega Plumbing Services — Family-Owned &amp; Operated</p>
+  </footer>
 </body>
 </html>
