@@ -32,9 +32,26 @@
     header{
       background:linear-gradient(180deg,var(--panel), #070707);
       color:var(--text);
-      padding:2rem 1rem;
+      padding:1.5rem 1rem;
       text-align:center;
       border-bottom: 4px solid var(--brand-orange);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    header img{
+      max-height: 100px;
+      margin-bottom: 1rem;
+      width: auto;
+    }
+
+    header h1{
+      margin: 0.2rem 0;
+    }
+
+    header p{
+      margin: 0.5rem 0 0 0;
     }
 
     nav{
@@ -123,11 +140,13 @@
       h1{font-size:1.25rem}
       nav a{display:inline-block; margin:.4rem .35rem}
       .box strong{font-size:1.25rem}
+      header img{max-height:80px}
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo.svg" alt="Omega Plumbing Services logo">
     <h1>Omega Plumbing Services</h1>
     <p>Central Coast's family-owned plumbing company — since 2001</p>
   </header>
