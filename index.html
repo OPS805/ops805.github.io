@@ -87,6 +87,7 @@
       align-items: center;
       justify-content: center;
       backdrop-filter: blur(8px);
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -165,7 +166,7 @@
 
     .box strong {
       display: block;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: var(--brand-orange);
       margin-bottom: 0.25rem;
     }
@@ -263,10 +264,25 @@
       border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
 
+    footer .social-links {
+      margin-top: 1rem;
+    }
+
+    footer .social-links a {
+      color: var(--brand-orange);
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-weight: 600;
+    }
+
+    footer .social-links a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       nav a { font-size: 0.85rem; padding: 0.3rem 0.5rem; }
-      .box strong { font-size: 1.6rem; }
+      .box strong { font-size: 1.3rem; }
       .about-card { flex-direction: column; text-align: center; }
       .about-logo { margin: 0 auto; }
     }
@@ -287,6 +303,8 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
+    <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.youtube.com/@omegaplumbing" target="_blank" rel="noopener noreferrer">YouTube</a>
   </nav>
 
   <main>
@@ -296,7 +314,7 @@
 
       <div class="grid highlights" style="margin-top: 1.5rem;">
         <div class="box"><strong>32+</strong><div>Experience</div></div>
-        <div class="box"><strong>5</strong><div>States Licensed</div></div>
+        <div class="box"><strong>#1005092</strong><div>CA Lic.</div></div>
         <div class="box"><strong>100%</strong><div>Family Owned</div></div>
       </div>
     </section>
@@ -375,6 +393,10 @@
 
   <footer>
     <p>&copy; 2026 Omega Plumbing Services — Family-Owned &amp; Operated</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+      <a href="https://www.youtube.com/@omegaplumbing" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
   </footer>
 
 </body>
