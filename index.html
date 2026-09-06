@@ -39,25 +39,27 @@
       border-bottom: 4px solid var(--brand-orange);
       display: flex;
       flex-direction: column;
-      align-items:center;
+      align-items: center;
     }
 
     .logo-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 72px;
-      height: 72px;
-      background: rgba(255, 106, 0, 0.1);
-      border: 2px solid var(--brand-orange);
+      width: 140px;
+      height: 140px;
+      background: #000;
+      border: 3px solid var(--brand-orange);
       border-radius: 50%;
       margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(255, 106, 0, 0.25);
     }
 
-    .logo-container svg {
-      width: 36px;
-      height: 36px;
-      fill: var(--brand-orange);
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     header h1 {
@@ -175,8 +177,50 @@
       margin-bottom: 0.25rem;
     }
 
-    .card {
-      border-left: 5px solid var(--brand-orange);
+    .about-card {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about-logo {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      background: #000;
+      border: 2px solid var(--brand-orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .about-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--brand-orange);
+      color: #000;
+      font-weight: 700;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--brand-orange-dark);
+      color: #fff;
     }
 
     .card strong {
@@ -186,20 +230,33 @@
       margin-bottom: 0.5rem;
     }
 
-    .card ul {
-      margin: 0.5rem 0 0 1.2rem;
-      padding: 0;
-      color: var(--muted-text);
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
     }
 
-    .contact a {
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .contact-item svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--brand-orange);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .contact-item div a {
       color: var(--brand-orange);
       text-decoration: none;
       font-weight: 600;
     }
 
-    .contact a:hover {
-      color: var(--brand-orange-dark);
+    .contact-item div a:hover {
       text-decoration: underline;
     }
 
@@ -214,21 +271,21 @@
     }
 
     /* Small screens */
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       header h1 { font-size: 1.5rem; }
       nav a { display: inline-block; margin: 0.2rem 0.2rem; font-size: 0.85rem; padding: 0.3rem 0.5rem; }
       .box strong { font-size: 1.5rem; }
+      .about-card { flex-direction: column; text-align: center; }
+      .about-logo { margin: 0 auto; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Inline Custom SVG Logo -->
-    <div class="logo-container" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.5-7.4-1.3l3 3-2 2-3-3C1.2 6.4 1.7 9.4 3.7 11.4c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l1.6-1.6c.4-.4.4-1 0-1.4zM4.4 10C3 8.6 2.7 6.4 3.6 4.7l2.5 2.5-1.7 1.7-1.3-1.3c-.2.6-.1 1.3.3 1.8l1 1-1 1-1-1z"/>
-      </svg>
+    <!-- Custom Logo Image Embedded -->
+    <div class="logo-container">
+      <img src="OmegaCovert.png" alt="Omega Plumbing Services Logo">
     </div>
     <h1>Omega Plumbing Services</h1>
     <p>Central Coast's family-owned plumbing company — since 2001</p>
@@ -247,21 +304,22 @@
       <p>Omega Plumbing Services provides high-end residential and light commercial plumbing across the Central Coast. Family-run with decades of experience.</p>
 
       <div class="grid highlights" style="margin-top: 1.5rem;">
-        <div class="box"><strong>32+</strong><div>Years Experience</div></div>
-        <div class="box"><strong>5 States</strong><div>Previously Licensed</div></div>
+        <div class="box"><strong>32+</strong><div>Experience</div></div>
+        <div class="box"><strong>5</strong><div>States Licensed</div></div>
         <div class="box"><strong>100%</strong><div>Family Owned</div></div>
       </div>
     </section>
 
     <section id="about">
       <h2>About Us</h2>
-      <div class="card">
-        <p>We focus on uncompromising quality workmanship, reliable communication, and complete customer satisfaction on every job.</p>
-        <p><strong>Specialties:</strong></p>
-        <ul>
-          <li>High-end residential installations and custom remodels</li>
-          <li>Light commercial plumbing solutions</li>
-        </ul>
+      <div class="card about-card">
+        <div class="about-logo">
+          <img src="OmegaCovert.png" alt="Omega Logo Mark">
+        </div>
+        <div class="about-content">
+          <p>Established in 2001, Omega Plumbing Services provides high-end residential and light commercial plumbing across the Central Coast. We pride ourselves on uncompromising quality workmanship, reliable service, and customer satisfaction. We are fully insured and committed to excellence in every project.</p>
+          <a href="#contact" class="btn">About More</a>
+        </div>
       </div>
     </section>
 
@@ -269,23 +327,57 @@
       <h2>Services</h2>
       <div class="grid services" role="list">
         <div class="card" role="listitem">
-          <strong>Residential Installation</strong>
-          <p>Design and precision installation for plumbing systems in new builds and custom home remodels.</p>
+          <strong>Residential Services</strong>
+          <p>Expert installation and repair for custom homes and remodels.</p>
         </div>
         <div class="card" role="listitem">
-          <strong>Commercial Plumbing</strong>
-          <p>Reliable light commercial work expertly tailored to small businesses and offices.</p>
+          <strong>Commercial Solutions</strong>
+          <p>Reliable plumbing for light commercial properties and offices.</p>
+        </div>
+        <div class="card" role="listitem">
+          <strong>Water Systems</strong>
+          <p>Installation and maintenance of water heaters, softeners, and filtration.</p>
+        </div>
+        <div class="card" role="listitem">
+          <strong>Repairs &amp; Maintenance</strong>
+          <p>Comprehensive diagnostic and repair services for all plumbing issues.</p>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <div class="card contact">
-        <p><strong>Phone:</strong> <a href="tel:+18057763403">(805) 776-3403</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@omegaplumbing.com">info@omegaplumbing.com</a></p>
-        <p><strong>Service Area:</strong> Central Coast</p>
-        <p><strong>Hours:</strong> Call for availability</p>
+      <div class="card">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+18057763403">(805) 776-3403</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:info@omegaplumbing.com">info@omegaplumbing.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <div>
+              <strong>Service Area</strong>
+              <p>Central Coast Service Area</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <div>
+              <strong>Hours</strong>
+              <p>Call for Availability</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
