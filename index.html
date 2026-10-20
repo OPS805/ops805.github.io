@@ -10,6 +10,10 @@
   <meta name="keywords" content="Plumber San Luis Obispo, Central Coast plumbing, residential plumbing, commercial plumber Morro Bay, CA Lic 1005092">
   <link rel="canonical" href="https://www.ops805.com" />
 
+  <!-- App Icons / Favicon -->
+  <link rel="icon" type="image/svg+xml" href="Untitled-2.svg">
+  <link rel="apple-touch-icon" href="Untitled-2.svg">
+
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Omega Plumbing Services | San Luis Obispo & Central Coast">
   <meta property="og:description" content="Family-owned residential and light commercial plumbing with decades of experience on the Central Coast.">
@@ -31,19 +35,6 @@
       "addressLocality": "Morro Bay",
       "addressRegion": "CA",
       "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCircle",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Plumbing Services"
-      },
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 35.3658,
-        "longitude": -120.8499
-      },
-      "geoRadius": "50000"
     },
     "areaServed": [
       "San Luis Obispo",
@@ -79,6 +70,7 @@
       line-height: 1.6;
       margin: 0;
       background: var(--bg);
+      padding-bottom: 60px; /* Space for mobile sticky nav */
     }
 
     header {
@@ -190,7 +182,7 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    .services {
+    .services, .social-grid {
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
@@ -208,6 +200,7 @@
 
     .card:hover, .box:hover {
       border-color: rgba(255, 106, 0, 0.4);
+      transform: translateY(-2px);
     }
 
     .box {
@@ -260,11 +253,23 @@
       border-radius: 6px;
       text-decoration: none;
       transition: background 0.2s;
+      text-align: center;
     }
 
     .btn:hover {
       background: var(--brand-orange-dark);
       color: #fff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brand-orange);
+      border: 1px solid var(--brand-orange);
+    }
+
+    .btn-outline:hover {
+      background: var(--brand-orange);
+      color: #000;
     }
 
     .card strong {
@@ -304,6 +309,50 @@
       text-decoration: underline;
     }
 
+    /* Social Media Section Styling */
+    .social-card {
+      border-top: 3px solid var(--brand-orange);
+      text-align: center;
+    }
+
+    .social-card h3 {
+      color: var(--text);
+      margin-top: 0;
+    }
+
+    /* Sticky Mobile Action Bar */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #080808;
+      border-top: 1px solid var(--border-color);
+      z-index: 100;
+      padding: 0.5rem 1rem;
+      justify-content: space-around;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .mobile-bar a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .mobile-bar a svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--brand-orange);
+    }
+
     footer {
       background: var(--panel);
       color: var(--muted-text);
@@ -335,6 +384,7 @@
       .box strong { font-size: 1.3rem; }
       .about-card { flex-direction: column; text-align: center; }
       .about-logo { margin: 0 auto; }
+      .mobile-bar { display: flex; }
     }
   </style>
 </head>
@@ -351,16 +401,15 @@
   <nav aria-label="Main navigation">
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
+    <a href="#work">Our Work</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
-    <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.youtube.com/@omegaplumbing" target="_blank" rel="noopener noreferrer">YouTube</a>
   </nav>
 
   <main>
     <section id="home">
       <h2>High-End Residential &amp; Commercial Plumbing</h2>
-      <p>Omega Plumbing Services provides high-end residential, ADU fixture installations, remodels, and light commercial plumbing across San Luis Obispo County and Santa Barbara County. Family-owned and operated with decades of trade experience.</p>
+      <p>Omega Plumbing Services provides high-end residential, ADU fixture installations, custom remodels, and light commercial plumbing across San Luis Obispo and Santa Barbara Counties. Family-owned and operated with decades of trade experience.</p>
 
       <div class="grid highlights" style="margin-top: 1.5rem;">
         <div class="box"><strong>32+ Years</strong><div>Experience</div></div>
@@ -378,6 +427,28 @@
         <div class="about-content">
           <p>Established in 2001, Omega Plumbing Services provides high-end residential and light commercial plumbing across the Central Coast. Honesty, quality craftsmanship, and accountability are at the center of every job we take on.</p>
           <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Featured Media / Our Work Section -->
+    <section id="work">
+      <h2>On the Job &amp; Recent Projects</h2>
+      <p>We document our work, custom builds, and job-site details regularly on Instagram and YouTube.</p>
+      
+      <div class="grid social-grid" style="margin-top: 1.5rem;">
+        <div class="card social-card">
+          <h3>📸 Instagram Showcase</h3>
+          <p>Check out our latest job-site photos, high-end residential trim, custom manifolds, and rough-in work.</p>
+          <strong style="color: var(--brand-orange);">@ops_805</strong>
+          <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer" class="btn">View Instagram Feed</a>
+        </div>
+
+        <div class="card social-card">
+          <h3>🎥 YouTube Channel</h3>
+          <p>Watch video walkthroughs, job-site technical breakdowns, and plumbing craftsmanship highlights.</p>
+          <strong style="color: var(--brand-orange);">@omegaplumbing</strong>
+          <a href="https://www.youtube.com/@omegaplumbing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Watch on YouTube</a>
         </div>
       </div>
     </section>
@@ -440,6 +511,22 @@
       </div>
     </section>
   </main>
+
+  <!-- Sticky Quick Action Bar for Mobile -->
+  <div class="mobile-bar" aria-label="Mobile Navigation Quick Bar">
+    <a href="tel:+18057763403">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      Call
+    </a>
+    <a href="mailto:omegaplmbg@gmail.com">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      Email
+    </a>
+    <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+  </div>
 
   <footer>
     <p>&copy; 2026 Omega Plumbing Services — CA Lic. #1005092 | San Luis Obispo &amp; Central Coast</p>
