@@ -389,3 +389,198 @@
     footer {
       background: var(--panel);
       color: var(--muted-text);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    footer .social-links {
+      margin-top: 1rem;
+    }
+
+    footer .social-links a {
+      color: var(--brand-orange);
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-weight: 600;
+    }
+
+    footer .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      nav a { font-size: 0.85rem; padding: 0.3rem 0.5rem; }
+      .box strong { font-size: 1.3rem; }
+      .about-card { flex-direction: column; text-align: center; }
+      .about-logo { margin: 0 auto; }
+      .mobile-bar { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="Untitled-2.svg" alt="Omega Plumbing Services Logo San Luis Obispo">
+    </div>
+    <h1>Omega Plumbing Services</h1>
+    <p>San Luis Obispo &amp; Central Coast Plumbing Specialists — Since 2001</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#work">Our Work</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>High-End Residential &amp; Commercial Plumbing</h2>
+      <p>Omega Plumbing Services provides high-end residential, service repairs, ADU fixture installations, custom remodels, and light commercial plumbing across San Luis Obispo and Santa Barbara Counties. Family-owned and operated with decades of trade experience.</p>
+
+      <div class="grid highlights" style="margin-top: 1.5rem;">
+        <div class="box"><strong>32+ Years</strong><div>Experience</div></div>
+        <div class="box"><strong>#1005092</strong><div>CA Lic. C-36</div></div>
+        <div class="box"><strong>100%</strong><div>Family Owned</div></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <div class="card about-card">
+        <div class="about-logo">
+          <img src="Untitled-2.svg" alt="Omega Logo Mark">
+        </div>
+        <div class="about-content">
+          <p>Established in 2001, Omega Plumbing Services provides high-end residential, general service repairs, and light commercial plumbing across the Central Coast. Honesty, quality craftsmanship, and accountability are at the center of every job we take on.</p>
+          <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>On the Job &amp; Recent Projects</h2>
+      <p>We document our work, custom builds, and job-site details regularly on Instagram and YouTube.</p>
+      
+      <div class="grid social-grid" style="margin-top: 1.5rem;">
+        <div class="card social-card">
+          <h3 style="font-size: 1.3rem;">📸 Instagram Showcase</h3>
+          <p>Check out our latest job-site photos, high-end residential trim, custom manifolds, and rough-in work.</p>
+          <strong style="color: var(--brand-orange); margin: 0.75rem 0;">@ops_805</strong>
+          <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer" class="btn">View Instagram Feed</a>
+        </div>
+
+        <div class="card social-card">
+          <h3 style="font-size: 1.3rem;">🎥 YouTube Channel</h3>
+          <p>Watch video walkthroughs, job-site technical breakdowns, and plumbing craftsmanship highlights.</p>
+          <strong style="color: var(--brand-orange); margin: 0.75rem 0;">@omegaplumbing</strong>
+          <a href="https://www.youtube.com/@omegaplumbing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Watch on YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Plumbing Services</h2>
+      <div class="grid services" role="list">
+        <div class="card" role="listitem">
+          <strong>Residential Service &amp; Small Repairs</strong>
+          <p>Have a small fix or fixture replacement? Call us for quick, dependable repairs, leaks, and updates.</p>
+        </div>
+        <div class="card" role="listitem">
+          <strong>High-End Residential &amp; ADU</strong>
+          <p>Custom home installations, ADU plumbing, unique fixture setups, and complex residential challenges.</p>
+        </div>
+        <div class="card" role="listitem">
+          <strong>Remodels &amp; Commercial</strong>
+          <p>Kitchen and bath remodeling, light commercial work, and tenant finish projects.</p>
+        </div>
+        <div class="card" role="listitem">
+          <strong>Appointments &amp; Referrals</strong>
+          <p>Schedule a service call directly or connect through your primary general contractor or designer.</p>
+        </div>
+      </div>
+
+      <!-- Service Callout Banner -->
+      <div class="featured-card">
+        <h3>🔧 Need a Quick Repair or Small Service Call?</h3>
+        <p>No job is too small for quality work. We handle quick service calls, fixture replacements, leak fixes, water heater issues, and everyday residential plumbing needs with the same high standard of craftsmanship.</p>
+        <div class="service-tags">
+          <span class="tag">Faucet &amp; Valve Replacements</span>
+          <span class="tag">Toilet &amp; Sink Repairs</span>
+          <span class="tag">Water Heater Service</span>
+          <span class="tag">Leak Repairs</span>
+          <span class="tag">Gas Line Upgrades</span>
+        </div>
+        <a href="tel:+18057763403" class="btn" style="margin-top: 1rem;">Call (805) 776-3403 for Service</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="card">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+18057763403">(805) 776-3403</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:omegaplmbg@gmail.com">omegaplmbg@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <div>
+              <strong>Service Area</strong>
+              <p>San Luis Obispo &amp; Santa Barbara Counties</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon - Fri: Call for Availability</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Quick Action Bar for Mobile -->
+  <div class="mobile-bar" aria-label="Mobile Navigation Quick Bar">
+    <a href="tel:+18057763403">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      Call
+    </a>
+    <a href="mailto:omegaplmbg@gmail.com">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      Email
+    </a>
+    <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Omega Plumbing Services — CA Lic. #1005092 | San Luis Obispo &amp; Central Coast</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ops_805/" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+      <a href="https://www.youtube.com/@omegaplumbing" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
+  </footer>
+
+</body>
+</html>
